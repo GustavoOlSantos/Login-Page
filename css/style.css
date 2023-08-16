@@ -1,0 +1,334 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: rgb(48, 85, 54);
+    /* rgb(64 95 69)*/
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 65px;
+    color: antiquewhite;
+    background-color: transparent;
+
+    font-size: 13pt;
+    font-family: "Open Sans";
+}
+
+.header .logo {
+    width: fit-content;
+    margin-right: 700px;
+    margin-left: 20px;
+}
+
+.header .logo a {
+    display: flex;
+    align-items: stretch;
+}
+
+.header .logo i {
+    font-size: 20pt;
+    margin-right: 10px;
+}
+
+.header .options {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+}
+
+.header .options a {
+    position: relative;
+    color: antiquewhite;
+}
+
+.header .options a.links:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -2px;
+    background-color: antiquewhite;
+    transition: .4s ease-in-out;
+}
+
+.header .options a.links:hover:before {
+    width: 100%;
+    background-color: antiquewhite;
+}
+
+.header .options .switch {
+    position: relative;
+    display: inline-block;
+    width: 230px;
+    height: 30px;
+}
+
+/* Hide default HTML checkbox */
+.header .options .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.header .options .slider {
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /*background-color: #ccc;*/
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.header .options .slider div.texts {
+    margin-left: 13px;
+}
+
+.header .options .slider div.texts a {
+    margin-right: 20px;
+}
+
+.header .options .slider:before {
+    position: absolute;
+    content: "";
+    display: flex;
+    align-items: center;
+    height: 26px;
+    width: 70px;
+    left: 4px;
+    bottom: 1px;
+    background-color: black;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.header .options input:checked+.slider:before {
+    width: 110px;
+}
+
+.header .options input:checked+.slider:before {
+    -webkit-transform: translateX(77px);
+    -ms-transform: translateX(77px);
+    transform: translateX(77px);
+}
+
+/* Rounded sliders */
+.header .options .slider.round {
+    border-radius: 34px;
+    border-color: transparent;
+}
+
+.header .options .slider.round:before {
+    border-radius: 5rem;
+}
+
+.bg-img {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.greeting-login {
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-direction: column;
+    font-family: "Oxygen";
+    letter-spacing: 2px;
+    color: antiquewhite;
+}
+
+.greeting-login .apresentação {
+    font-family: "Open Sans";
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+    width: 70%;
+}
+
+.greeting-login .apresentação h1 {
+    font-size: 30pt;
+    letter-spacing: 4px;
+}
+
+.greeting-login .apresentação h4 {
+    font-size: 15pt;
+    letter-spacing: 4px;
+}
+
+.greeting-login .apresentação a {
+    font-family: "Open Sans";
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(48, 85, 54);
+    background-color: rgb(19, 41, 23);
+    font-size: 14pt;
+    font-weight: 800;
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+}
+
+
+
+
+
+.login-field {
+    width: 40vw;
+    height: 75vh;
+    margin-top: 60px;
+    margin-left: 20px;
+    padding: 0 30px;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    font-family: "Oxygen";
+    letter-spacing: 2px;
+
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.6px);
+    -webkit-backdrop-filter: blur(7.6px);
+    border: 1px solid
+}
+
+.login-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: 20px;
+    color: antiquewhite;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    margin-right: 75px;
+}
+
+.login-field label {
+    font-size: 12pt;
+    color: antiquewhite;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    height: 35px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding-left: 15px;
+    font-size: 11pt;
+
+    background-color: antiquewhite;
+}
+
+input#senha {
+    margin-bottom: 0;
+}
+
+a.reminder {
+    pointer-events: all;
+    cursor: pointer;
+    margin-top: 10px;
+    color: blanchedalmond;
+    font-size: 10pt;
+    margin-bottom: 20px;
+}
+
+form button.submitt {
+    color: black;
+    background-color: antiquewhite;
+    cursor: pointer;
+    text-align: center;
+    width: 50%;
+    height: 50px;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+form span {
+    display: flex;
+    align-items: baseline;
+}
+
+form span a {
+    font-size: 14pt;
+    color: antiquewhite;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.login-field hr {
+    background-color: antiquewhite;
+}
+
+.alt-login {
+    display: flex;
+    flex-direction: column;
+    margin-top: -10px;
+}
+
+.alt-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.alt-btn a {
+    text-align: center;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 12pt;
+    color: black;
+    height: 20px;
+    width: 220px;
+    padding: 20px 10px;
+    border-radius: 10px;
+}
+
+.alt-btn i {
+    font-size: 16pt;
+}
+
+
+
+
+
+
+
+
+
+
+.register-field {
+    display: none;
+}

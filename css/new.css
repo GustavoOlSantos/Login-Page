@@ -1,0 +1,469 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    /*background-color: #F4F4F4*/
+    /* rgb(64 95 69)*/
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 65px;
+    color: rgb(48, 85, 54);
+    box-shadow: 1px -4px 20px 0px rgba(0, 0, 0, 20%);
+    background-color: transparent;
+
+    font-size: 13pt;
+    font-family: "Open Sans";
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.header .logo {
+    width: fit-content;
+    margin-right: 660px;
+    margin-left: 20px;
+}
+
+.header .logo a {
+    display: flex;
+    align-items: stretch;
+    width: max-content;
+}
+
+.header .logo i {
+    font-size: 20pt;
+    margin-right: 10px;
+}
+
+.header .options {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+}
+
+.header .options a {
+    cursor: pointer;
+    position: relative;
+    color: rgb(48, 85, 54);
+    transition: color .6s;
+    width: max-content;
+}
+
+.header .options #log {
+    color: #F4F4F4;
+
+}
+
+.header .options #reg {
+    color: rgb(48, 85, 54);
+}
+
+/*.header .options a.links:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -2px;
+    background-color: rgb(48, 85, 54);
+    transition: .4s ease-in-out;
+}
+
+.header .options a.links:hover:before {
+    width: 100%;
+    background-color: rgb(48, 85, 54);
+}*/
+
+.header .options .switch {
+    position: relative;
+    display: inline-block;
+    width: 230px;
+    height: 30px;
+}
+
+/* Hide default HTML checkbox */
+.header .options .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.header .options .slider {
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /*background-color: #ccc;*/
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.header .options .slider div.texts {
+    margin-left: 13px;
+}
+
+.header .options .slider div.texts a {
+    margin-right: 20px;
+}
+
+.header .options .slider:before {
+    position: absolute;
+    content: "";
+    display: flex;
+    align-items: center;
+    height: 26px;
+    width: 80px;
+    left: 2px;
+    bottom: 1px;
+    background-color: rgb(48, 85, 54);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.header .options input:checked+.slider:before {
+    width: 140px;
+}
+
+.header .options input:checked+.slider:before {
+    -webkit-transform: translateX(77px);
+    -ms-transform: translateX(77px);
+    transform: translateX(77px);
+}
+
+/* Rounded sliders */
+.header .options .slider.round {
+    border-radius: 34px;
+    border-color: transparent;
+}
+
+.header .options .slider.round:before {
+    border-radius: 5rem;
+}
+
+.bg-img {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.bg-img img {
+    position: absolute;
+    left: 0;
+    top: 65px;
+    width: 100%;
+    height: 100%;
+}
+
+.greeting-login {
+    position: relative;
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-direction: column;
+    font-family: "Oxygen";
+    letter-spacing: 2px;
+    color: rgb(48, 85, 54);
+    left: 0;
+    z-index: 2;
+    transition: all .4s ease-in-out !important;
+}
+
+.greeting-login .apresentação {
+    font-family: "Open Sans";
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+    width: 70%;
+}
+
+.greeting-login .apresentação h1 {
+    font-size: 30pt;
+    letter-spacing: 4px;
+}
+
+.greeting-login .apresentação h4 {
+    font-size: 15pt;
+    letter-spacing: 4px;
+}
+
+.greeting-login .apresentação a {
+    font-family: "Open Sans";
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F4F4F4;
+    background-color: rgb(19, 41, 23);
+    font-size: 14pt;
+    font-weight: 800;
+    border-radius: 10px;
+    width: 110px;
+    height: 50px;
+    transition: all .4s ease;
+}
+
+.greeting-login .apresentação a:hover,
+form button.submitt:hover {
+    transform: scale(1.1);
+}
+
+
+
+.login-field {
+    position: relative;
+    left: 0;
+    width: 40vw;
+    height: 82vh;
+    margin-top: 60px;
+    margin-left: 20px;
+    padding: 0 30px;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    font-family: "Oxygen";
+    letter-spacing: 2px;
+
+    z-index: 2;
+    pointer-events: all;
+    opacity: 100%;
+    transition: all .6s ease-in-out;
+
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.6px);
+    -webkit-backdrop-filter: blur(7.6px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+}
+
+.login-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: 20px;
+    color: rgb(48, 85, 54);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    margin-right: 75px;
+}
+
+.login-field label {
+    font-size: 12pt;
+    color: rgb(48, 85, 54);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    height: 35px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding-left: 15px;
+    font-size: 11pt;
+
+    background-color: #00000005;
+    border: solid 1px #00000059;
+    border-top-width: 0;
+    border-right-width: 0
+}
+
+.login-field input#senha {
+    margin-bottom: 0;
+}
+
+a.reminder {
+    pointer-events: all;
+    cursor: pointer;
+    margin-top: 10px;
+    color: rgb(19, 41, 23);
+    font-size: 10pt;
+    margin-bottom: 20px;
+}
+
+form button.submitt {
+    color: #F4F4F4;
+    background-color: rgb(48 85 54);
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 12pt;
+    width: 50%;
+    height: 50px;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: all .4s ease;
+}
+
+form span {
+    display: flex;
+    align-items: baseline;
+}
+
+form span a {
+    font-size: 14pt;
+    color: rgb(48, 85, 54);
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.login-field hr {
+    background-color: rgb(48, 85, 54);
+}
+
+.alt-login {
+    display: flex;
+    flex-direction: column;
+    margin-top: -10px;
+}
+
+.alt-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.alt-btn a {
+    position: relative;
+    text-align: center;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 12pt;
+    color: black;
+    height: 20px;
+    width: 238px;
+    padding: 20px 10px;
+    border-radius: 10px;
+
+    overflow: hidden;
+    transition: all .4s ease;
+}
+
+.alt-btn a:before {
+    content: '';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.478);
+    box-shadow: 20px 0px 20px 5px rgb(0 0 0 / 0.478);
+    top: 0;
+    left: -290px;
+    height: 100%;
+    width: 100%;
+    transition: all .7s ease;
+}
+
+.alt-btn a:hover:before {
+    left: 0px;
+}
+
+.alt-btn i {
+    font-size: 16pt;
+}
+
+.forms {
+    position: relative;
+    display: flex;
+}
+
+.register-field {
+    position: absolute;
+    left: 0;
+    width: 40vw;
+    height: 82vh;
+    margin-top: 60px;
+    margin-left: 20px;
+    padding: 0 30px;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    font-family: "Oxygen";
+    letter-spacing: 2px;
+
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0%;
+    transition: all .6s ease-in-out;
+    overflow-y: scroll;
+
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.6px);
+    -webkit-backdrop-filter: blur(7.6px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+}
+
+.register-field::-webkit-scrollbar {
+    width: 8px;
+    height: 5px;
+    border-radius: 16px;
+}
+
+.register-field::-webkit-scrollbar-track {
+    background: #88888841;
+    border-radius: 16px;
+}
+
+.register-field::-webkit-scrollbar-thumb {
+    background: rgba(48, 48, 48, 0.5);
+    border-radius: 16px;
+}
+
+
+.register-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: 20px;
+    color: rgb(48, 85, 54);
+}
+
+.register-field label {
+    font-size: 12pt;
+    color: rgb(48, 85, 54);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.register-field button.submitt {
+    color: #F4F4F4;
+    background-color: rgb(48 85 54);
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 12pt;
+    width: 50%;
+    height: 50px;
+    padding: 10px 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    transition: all .4s ease;
+}
